@@ -64,7 +64,7 @@ public interface OdeMessages extends Messages {
 
   // Used in DesignToolbar.java
 
-  @DefaultMessage("Save")
+  @DefaultMessage("SaveMe")
   @Description("Label of the button for save")
   String saveButton();
 
