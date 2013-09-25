@@ -1125,6 +1125,23 @@ public final class Canvas extends AndroidViewComponent implements ComponentConta
   }
 
   /**
+   * Added function to draw segments of circles and ovals.
+   * @param bottom
+   * @param left
+   * @param right
+   * @param top
+   * @param startAngle
+   * @param sweepAngle
+   * @param filled
+   */
+  @SimpleFunction
+  public void DrawSegment(float bottom, float left, float right, float top, float startAngle, float sweepAngle, boolean filled) {
+    RectF r = new RectF(left, top, right, bottom);
+    view.canvas.drawArc(r, startAngle, sweepAngle, filled, paint);
+    view.invalidate();
+  }
+
+  /**
    * Draws a line between the given coordinates on the canvas.
    *
    * @param x1  x coordinate of first point
