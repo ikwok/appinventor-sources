@@ -33,7 +33,7 @@ Blockly.Language.lists_create_with = {
   init: function() {
     this.setColour(Blockly.LIST_CATEGORY_HUE);
     this.appendValueInput('ADD0')
-        .appendTitle("make a list");
+        .appendTitle("make a list modified");
     this.appendValueInput('ADD1');
     this.setOutput(true, Blockly.Language.YailTypeToBlocklyType("list",Blockly.Language.OUTPUT));
     this.setMutator(new Blockly.Mutator(['lists_create_with_item']));
