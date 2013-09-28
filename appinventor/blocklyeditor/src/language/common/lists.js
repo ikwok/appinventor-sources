@@ -182,15 +182,19 @@ Blockly.Language.lists_is_empty = {
   typeblock: [{ translatedName: Blockly.LANG_LISTS_TITLE_IS_EMPTY }]
 };
 
-Blockly.Language.lists_pick_random_item = {
+Blockly.Language.lists_pick_an_item = {
   // Length of list.
   category : Blockly.LANG_CATEGORY_LISTS,
-  helpUrl : Blockly.LANG_LISTS_PICK_RANDOM_ITEM_HELPURL,
+  helpUrl : Blockly.LANG_LISTS_PICK_AN_ITEM_HELPURL,
   init : function() {
     this.setColour(Blockly.LIST_CATEGORY_HUE);
     this.setOutput(true, null);
-    this.appendValueInput('LIST').setCheck(Blockly.Language.YailTypeToBlocklyType("list",Blockly.Language.INPUT)).appendTitle('pick a random item').appendTitle('list');
-    Blockly.Language.setTooltip(this, Blockly.LANG_LISTS_PICK_RANDOM_TOOLTIP);
+    // IRENE MADE CHANGES HERE
+    this.appendValueInput('LIST').setCheck(Blockly.Language.YailTypeToBlocklyType("list",Blockly.Language.INPUT)).appendTitle('pick a');
+    var dropdown = new Blockly.FieldDropdown([['first', 'FIRST'], ['random', 'RANDOM'], ['last', 'LAST']]);
+    input.appendTitle(dropdown, 'MODE').appendTitle('item').appendTitle('list');
+
+    Blockly.Language.setTooltip(this, Blockly.LANG_LISTS_AN_TOOLTIP);
     this.appendCollapsedInput().appendTitle('pick random', 'COLLAPSED_TEXT');
   },
   onchange: Blockly.WarningHandler.checkErrors,
