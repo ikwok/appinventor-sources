@@ -200,7 +200,7 @@ Blockly.Yail.lists_position_in = function() {
 
 Blockly.Yail.lists_pick_an_item = function() {
   // Pick first/random/last item
-  var mode = this.getTitleValue('OP');
+  var mode = this.getTitleValue('dropdown');
   var tuple = Blockly.Yail.lists_pick_an_item.OPERATORS[mode];
   var operator = tuple[0];
   var order = tuple[1];
